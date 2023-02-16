@@ -25,27 +25,65 @@ body {
   width: 100vw;
   height: 100vh;
   background: #d9d9d9;
-  transition: all 0.5s ease-in;
-}
-
-.circle {
-  width: 100%;
-  height: 20rem;
-  border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 100%;
-  background-color: blueviolet;
-  display: grid;
-  justify-content: end;
   position: relative;
 }
-.circle > img {
+.round {
+  position: absolute;
+  width: 100%;
+  height: 44%;
+  display: flex;
+  background-color: #8359b9;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;}
+.round > img{
   object-fit: cover;
   width: 100%;
   height: 100%;
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
-  opacity: 0.6;
-  background-color: blueviolet;
+  background-color: #8359b9;
+  opacity: .5;
+}
+.round > h2 {
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  width: 12rem;
+  line-height: 3rem;
+  border-radius: 3rem;
+  background-color: snow;
+  box-shadow: 0px 2px 3px 0px black;
+  align-self: baseline;
+}
+.round > h2 > p {
+  color: rgb(54, 5, 103);
+}
+.profile_pic{
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid;
+  margin: 0 auto;
+  top: 35%;
+  border-radius: 50%;
+}
+.profile_pic > label{
+  font-size: 5rem;
+  margin: 0 auto;
+}
+.profile_pic > label > ion-icon{
+ margin-top: 1rem;
+ color: rgba(255, 255, 255, 0.829);
+}
+.profile_pic > p{
+  font-size: 2.5rem;
+  position: absolute;
+  left: 75%;
+  top: 60%;
+  padding: .2rem;
+}
+.profile_pic > p > ion-icon{
+color: #8359b9;
 }
 .triangle_one {
   position: fixed;
@@ -70,71 +108,32 @@ body {
 .triangle_third {
   position: fixed;
   top: 20%;
-  right: -65.3%;
+  right: -64.5%;
   overflow: hidden;
   height: 26%;
   width: 100%;
-  rotate: 10deg;
+  rotate: 14deg;
   background: white;
 }
-.circle > h2 {
-  width: 10rem;
-  line-height: 2rem;
-  border-radius: 3rem;
-  background-color: snow;
-  box-shadow: 0px 2px 3px 0px black;
-  height: max-content;
-  position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
+.profile_details{
+  position: relative;
+  height: 70%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2rem;
 }
-
-.profile_pic {
-  width: 6rem;
-  height: 6rem;
-  border: 1px solid;
-  position: absolute;
-  top: 40%;
-  left: 38%;
-  border-radius: 50%;
-}
-.profile_pic > ion-icon {
-  width: 4rem;
-  height: 4rem;
-  margin-top: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-.camera {
-  position: absolute;
-  left: 59.5%;
-  top: 49%;
-}
-.camera > ion-icon {
-  font-size: 1.2rem;
-  background-color: white;
-  border-radius: 50%;
-  padding: 0.4rem;
-}
-.user_name {
-  text-transform: capitalize;
-  text-align: center;
-  margin-top: 2.4rem;
-}
-.user_name > p > ion-icon {
-  margin-right: 0.5rem;
-  text-align: center;
-}
-.profile_details > div {
-  text-transform: capitalize;
+.profile_details > div{
   display: flex;
   justify-content: space-around;
-  margin: 1rem 1rem 0 1rem;
-  padding: 0.5rem;
-  position: relative;
+  padding: .8rem;
+  margin: 0 1rem 1rem 1rem;
   background: #9b8cb3;
+  position: relative;
   border-bottom-right-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
-
+  text-transform: capitalize;
   color: rgba(255, 255, 255, 0.834);
 }
 .profile_details > div::before {
@@ -149,11 +148,10 @@ body {
   border-bottom-left-radius: 0.5rem;
   border-top-right-radius: 0.1rem;
   border-top-left-radius: 0.5rem;
-}
-
+} 
 #footer {
   position: absolute;
-  bottom: 4rem;
+  bottom: 1.5rem;
   left: 2.5%;
   width: 95%;
   height: 60px;
@@ -620,6 +618,8 @@ input:checked + .slider:before {
   width: 100%;
   height: 48%;
   transition: all 1s ease;
+  transform: translateY(5rem);
+  /* transform: scale(0); */
 }
 
 /* ------------------------ styling the upi page --------------------------------------------------- */
@@ -668,39 +668,3 @@ input:checked + .slider:before {
 /* ----------------------  media query for --------------------------------------------------------------------------------------------------------------------------- */
 /* ----------------------- width:-400px and height:- 900px ---------------------------------------------- */
 
-@media screen and (width: 414px) {
-  .circle {
-    height: 24rem;
-  }
-  .profile_pic {
-    top: 36%;
-    left: 38%;
-  }
-  .camera {
-    left: 58%;
-    top: 43%;
-  }
-  .profile_two > h3 {
-    top: 38%;
-    left: 0.25rem;
-  }
-  .profile_two > h4 {
-    top: 43%;
-    left: 0.25rem;
-  }
-  .user_name {
-    margin-top: 3rem;
-  }
-  .profile_details > div {
-    text-transform: capitalize;
-    margin: 1.7rem 1rem 0 1rem;
-    padding: 0.8rem;
-  }
-}
-
-@media screen and (width: 390px) {
-  .camera {
-    left: 57%;
-    top: 48%;
-  }
-}
