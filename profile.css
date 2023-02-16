@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  font-family: " sans-serif";
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile {
+  position: relative;
+  overflow: hidden;
+}
+.profile_two {
+  width: 100vw;
+  height: 100vh;
+  background: #d9d9d9;
+  position: relative;
+}
+.round {
+  position: absolute;
+  width: 100%;
+  height: 44%;
+  display: flex;
+  background-color: #8359b9;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;}
+.round > img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  background-color: #8359b9;
+  opacity: .5;
+}
+.round > h2 {
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  width: 12rem;
+  line-height: 3rem;
+  border-radius: 3rem;
+  background-color: snow;
+  box-shadow: 0px 2px 3px 0px black;
+  align-self: baseline;
+}
+.round > h2 > p {
+  color: rgb(54, 5, 103);
+}
+.profile_pic{
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid;
+  margin: 0 auto;
+  top: 35%;
+  border-radius: 50%;
+}
+.profile_pic > label{
+  font-size: 5rem;
+  margin: 0 auto;
+}
+.profile_pic > label > ion-icon{
+ margin-top: 1rem;
+ color: rgba(255, 255, 255, 0.829);
+}
+.profile_pic > p{
+  font-size: 2.5rem;
+  position: absolute;
+  left: 75%;
+  top: 60%;
+  padding: .2rem;
+}
+.profile_pic > p > ion-icon{
+color: #8359b9;
+}
+.triangle_one {
+  position: fixed;
+  bottom: -15.7%;
+  left: -15%;
+  overflow: hidden;
+  height: 30%;
+  width: 110%;
+  background: white;
+  transform: rotate(20deg);
+}
+.triangle_two {
+  position: fixed;
+  top: 65%;
+  right: -65%;
+  overflow: hidden;
+  height: 26%;
+  width: 100%;
+  transform: rotate(60deg);
+  background: white;
+}
+.triangle_third {
+  position: fixed;
+  top: 20%;
+  right: -64.5%;
+  overflow: hidden;
+  height: 26%;
+  width: 100%;
+  rotate: 14deg;
+transform: rotate(14deg);
+  background: white;
+}
+.profile_details{
+  position: relative;
+  height: 70%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.profile_details > div{
+  display: flex;
+  justify-content: space-around;
+  padding: .8rem;
+  margin: 0 1rem 1rem 1rem;
+  background: #9b8cb3;
+  position: relative;
+  border-bottom-right-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.834);
+}
+.profile_details > div::before {
+  content: "";
+  position: absolute;
+  left: -0.038rem;
+  top: -0.4rem;
+  width: 1.4rem;
+  height: 1rem;
+  rotate: 45deg;
+  background: #9b8cb3;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: 0.1rem;
+  border-top-left-radius: 0.5rem;
+} 
+#footer {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2.5%;
+  width: 95%;
+  height: 60px;
+  z-index: 10;
+  background: #f8f8f8;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 100vw;
+  box-shadow: 0 0 10px grey;
+}
+
+#footer > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#footer > div > ion-icon {
+  font-size: 25px;
+}
+
+#footer > div > a > h5 {
+  color: blue;
+}
+
+.footer-crown {
+  display: none !important;
+}
+
+.updated-footer {
+  grid-template-columns: repeat(5, 1fr) !important;
+}
+
+.crown-added {
+  border-radius: 100%;
+  transform: translateY(-40%);
+  background: white;
+}
+
+/* -------------------withdrawal page and  ------------------------------------------------------------------------- */
+
+.profile_two > h3 {
+  position: fixed;
+  top: 45%;
+  left: 0.25rem;
+  font-size: 1.7rem;
+  z-index: 5;
+  color: rgba(0, 0, 0, 0.725);
+}
+.withdrawals {
+  overflow: hidden;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: rgba(255, 255, 255, 0.823);
+  transform: translateX(-130%);
+  transition: all 1s ease-in;
+}
+.withdrawal {
+  width: 95%;
+  height: 60%;
+  border: 1px solid;
+}
+.withdrawal > ion-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+.winning_amount {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+.payment_method {
+  height: 70%;
+}
+.bank {
+  margin-top: 0.2rem;
+  margin: 0 0.3rem;
+}
+.account {
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  border: 1px solid;
+  border-radius: 2rem;
+}
+.account > span {
+  display: flex;
+}
+.account > span > ion-icon {
+  padding: 0 1rem;
+}
+.withdrawal_footer {
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.4rem;
+}
+.withdrawal_footer > div {
+  text-align: start;
+  height: 5rem;
+}
+.withdrawal_footer > div > p {
+  padding-left: 0.5rem;
+}
+input[type="number"] {
+  width: 100%;
+  border: 1px solid;
+  border-radius: 2rem;
+  height: 2rem;
+  margin-top: 0.4rem;
+  text-align: center;
+  outline: none;
+}
+.btn {
+  display: flex;
+  justify-content: end;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+button {
+  width: 6rem;
+  height: 2rem;
+  border: none;
+  background-color: rgba(0, 128, 0, 0.743);
+  color: rgba(255, 255, 255, 0.913);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* -----------------------------------switch system for withdrwal and deposite -------------------------------------------------------------------------------------- */
+
+.switch {
+  position: relative;
+  display: flex;
+  margin: 0.8rem 0 0 0.5rem;
+  width: 60px;
+  height: 34px;
+  z-index: 4;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* -------------------------------- deposite page -------------------------------------------------------------------- */
+.deposite {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(120%);
+  transition: all 1s ease-in-out;
+  color: rgba(255, 255, 255, 0.823);
+}
+
+.innear_dep {
+  width: 95%;
+  height: 60%;
+}
+
+.innear_dep > div {
+  margin-top: 3rem;
+}
+
+.innear_dep > div > h5 {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+.dep_amount {
+  height: 50%;
+}
+.dep_amount > input {
+  width: 95%;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid;
+  background-color: #cccccc90;
+}
+
+.innear_dep > span {
+  display: flex;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+/* -------------------- setting page css ------------------------------------------------------------------------------------------------------------------------- */
+
+.setting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  text-transform: capitalize;
+  transform: translateX(140%);
+  transition: all 0.5s ease-out;
+}
+.profile_two > h4 {
+  position: fixed;
+  top: 50%;
+  left: 0.25rem;
+  font-size: 1.7rem;
+  z-index: 5;
+  color: rgba(0, 0, 0, 0.725);
+}
+.header {
+  background-color: #8359b9;
+  border-bottom-right-radius: 3.5rem;
+  width: 100%;
+  height: 12%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.header > span {
+  border: 1px solid;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  margin-left: 0.5rem;
+  margin-top: 0.3rem;
+}
+.header > h2 {
+  width: 8rem;
+  line-height: 2rem;
+  border-radius: 3rem;
+  background-color: snow;
+  box-shadow: 0px 2px 3px 0px black;
+  align-self: baseline;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+.header > h2 > p {
+  color: rgb(54, 5, 103);
+}
+.header div:nth-child(3) {
+  position: absolute;
+  top: -3%;
+  right: -32%;
+  width: 10rem;
+  height: 12rem;
+  border-radius: 2.5rem;
+  rotate: 25deg;
+  background-color: #1814d0;
+  z-index: -1;
+}
+
+.header div:nth-child(4) {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 3.2rem;
+  background-color: #ad1f85;
+  z-index: -1;
+}
+
+.header div:nth-child(5) {
+  position: absolute;
+  top: 62%;
+  right: 32%;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3.5rem;
+  background-color: #11c6d1;
+  z-index: -1;
+}
+
+.setting > h3 {
+  width: 20%;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.setting > h2 {
+  width: max-content;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+.setting_opp {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  height: 7rem;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+.setting_opp > div > div {
+  border: 1px solid;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.setting_opp div > ion-icon,
+.setting_opp div > i {
+  color: rgba(0, 0, 0, 0.71);
+  font-size: 1.8rem;
+}
+.setting_opp div > img {
+  height: 3rem;
+}
+
+/* ----------------------------------- here setting profile page css ------------------------------------------------------------------------------ */
+.pro_det,
+.bank_det {
+  transition: all 1s ease;
+}
+.pro_det {
+  width: 100%;
+  height: 50%;
+}
+.s_pro,
+.s_bank {
+  width: 35%;
+  padding: 0 1rem 0 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding: 0.4rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.4rem;
+  background-color: #eaca78;
+}
+.s_pro::before,
+.s_bank::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -0.35rem;
+  width: 1rem;
+  height: 0.8rem;
+  rotate: 35deg;
+  background-color: #eaca78;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: 0.1rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.pro_edit {
+  border: 1px solid;
+  padding-bottom: 1rem;
+  padding-top: 0.2rem;
+  border-radius: 3rem;
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.607);
+  position: relative;
+  height: 80%;
+}
+.pro_edit > div > input {
+  width: 85%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  padding-top: 1.3rem;
+  background: none;
+  padding-bottom: 0.5rem;
+}
+.pro_edit > div > ion-icon {
+  font-weight: 900;
+  position: absolute;
+  right: 2rem;
+  padding-top: 1rem;
+}
+
+.pro_edit > div > ::placeholder {
+  color: rgba(0, 0, 0, 0.817);
+  font-weight: 700;
+}
+.pro_edit > span {
+  display: flex;
+  justify-content: end;
+}
+.pro_edit > span > p {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: #8359b9;
+  color: white;
+}
+/* ------------------------ stylng the bank page -------------------------------------------------------------------------------------- */
+
+.bank_det {
+  width: 100%;
+  height: 48%;
+  transition: all 1s ease;
+  transform: translateY(5rem);
+  /* transform: scale(0); */
+}
+
+/* ------------------------ styling the upi page --------------------------------------------------- */
+.upi_page {
+  height: 45%;
+  overflow-y: scroll;
+  padding-bottom: 2rem;
+  transition: all 1s ease-in-out;
+}
+.s_upi {
+  position: relative;
+}
+.s_upi > span > ion-icon {
+  border: 1px solid;
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  bottom: -14rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #8359b9;
+  color: white;
+  z-index: -1;
+}
+.upis > input {
+  padding-left: 0.4rem;
+  width: 90%;
+  height: 2rem;
+  margin-top: 0.5rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.upis > ::placeholder {
+  color: black;
+}
+
+/* ---------------------- styling the contact page  ---------------------------------------------------------------------------------- */
+.contact_page {
+  margin-top: 0.5rem;
+  color: blue;
+  transition: all 1s ease;
+}
+
+/* ----------------------  media query for --------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------- width:-400px and height:- 900px ---------------------------------------------- */
+
