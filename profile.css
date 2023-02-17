@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Explora&family=Unbounded:wght@400;500&display=swap');
 
 * {
   margin: 0;
@@ -10,7 +10,7 @@ body {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  font-family: " sans-serif";
+	font-family: Raleway, sans-serif;
   text-align: center;
   text-decoration: none;
   display: flex;
@@ -26,6 +26,7 @@ body {
   height: 100vh;
   background: #d9d9d9;
   position: relative;
+  /* display: none; */
 }
 .round {
   position: absolute;
@@ -61,30 +62,30 @@ body {
 }
 .profile_pic {
   position: relative;
-  width: 8rem;
-  height: 8rem;
+  width: 7rem;
+  height: 7rem;
   border: 1px solid;
   margin: 0 auto;
   top: 35%;
   border-radius: 50%;
 }
 .profile_pic > label {
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 0 auto;
 }
 .profile_pic > label > ion-icon {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   color: rgba(255, 255, 255, 0.829);
 }
 .profile_pic > p {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   position: absolute;
   left: 75%;
   top: 60%;
   padding: 0.2rem;
 }
 .profile_pic > p > ion-icon {
-  color: #8359b9;
+  color: gray;
 }
 .triangle_one {
   position: fixed;
@@ -119,17 +120,30 @@ body {
 }
 .profile_details {
   position: relative;
-  height: 70%;
-  top: 20%;
+  height: 64%;
+  top: 19%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 2rem;
 }
+.user_details{
+ display: block;
+ margin-bottom: 2rem;
+ color: gray;
+}
+.user_details > h4{
+display: flex;
+justify-content: center;
+margin-top: .3rem;
+}
+.user_details > h4 > ion-icon{
+  margin-right: .5rem;
+}
 .profile_details > div {
   display: flex;
   justify-content: space-around;
-  padding: 0.8rem;
+  padding: 0.5rem;
   margin: 0 1rem 1rem 1rem;
   background: #9b8cb3;
   position: relative;
@@ -153,16 +167,17 @@ body {
 }
 #footer {
   position: absolute;
-  bottom: 4rem;
+  bottom: 3.5rem;
   left: 2.5%;
   width: 95%;
-  height: 70px;
+  height: 63px;
   z-index: 10;
   background: #f8f8f8;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   border-radius: 100vw;
   box-shadow: 0 0 10px grey;
+ text-transform: uppercase;
 }
 
 #footer > div {
@@ -173,9 +188,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+#footer > div > a{
+  text-decoration: none;
+}
 #footer > div > ion-icon {
   font-size: 25px;
+  margin-bottom: .1rem;
 }
 
 #footer > div > a > h5 {
@@ -187,7 +205,7 @@ body {
   box-shadow: 0 0 10px grey;
   background: white;
   transform: translateY(-1.5rem);
-  font-size: 2.2rem;
+  font-size: 1.7rem;
 }
 .footer-crown > h3 > ion-icon{
   margin-top: .5rem;
@@ -204,31 +222,32 @@ body {
   color: rgba(0, 0, 0, 0.725);
 }
 .withdrawals {
+  border: 1px solid;
   overflow: hidden;
   width: 100vw;
   position: fixed;
-  top: 0;
+  top: 15%;
   left: 0;
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  color: rgba(255, 255, 255, 0.823);
-  transform: translateY(130%);
-  transition: all 1s ease-in;
+  height: 70vh;
+  transform: translateY(150%);
+  transition: all .5s ease-in;
 }
 .withdrawal {
+  margin: 0 auto;
   width: 95%;
-  height: 60%;
-  border: 1px solid;
+  height: 65%;
+  transition: all .5s ease-in;
 }
-.withdrawal > ion-icon {
+.withdrawals > ion-icon {
   position: absolute;
   top: 0;
   right: 0;
   font-size: 2rem;
   margin-top: 0.5rem;
   margin-right: 1rem;
+  z-index: 2;
 }
 .winning_amount {
   display: flex;
@@ -302,8 +321,7 @@ button {
   display: flex;
   margin: 0.8rem 0 0 0.5rem;
   width: 60px;
-  height: 34px;
-  z-index: 4;
+  height: 75px;
 }
 
 .switch input {
@@ -360,19 +378,15 @@ input:checked + .slider:before {
 
 /* -------------------------------- deposite page -------------------------------------------------------------------- */
 .deposite {
-  z-index: -1;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(120%);
-  transition: all 1s ease-in-out;
-  color: rgba(255, 255, 255, 0.823);
+  margin: 0 auto;
+  position: fixed;
+  top: 12%;
+  left: .5rem;
+  right: .5rem;
+  width: 95%;
+  height: 65%;
+  transition: all .5s ease-out;
+  transform: translate(130%);
 }
 
 .innear_dep {
@@ -400,6 +414,8 @@ input:checked + .slider:before {
   border: none;
   border-bottom: 2px solid;
   background-color: #cccccc90;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .innear_dep > span {
@@ -665,3 +681,26 @@ input:checked + .slider:before {
 
 /* ----------------------  media query for --------------------------------------------------------------------------------------------------------------------------- */
 /* ----------------------- width:-400px and height:- 900px ---------------------------------------------- */
+@media screen and (max-height:667px) {
+  .profile_pic {
+    width: 6rem;
+    height: 6rem;
+  }
+  .profile_pic > label {
+    font-size: 3rem;
+    margin: 0 auto;
+  }
+  
+  
+  .profile_details {
+    position: relative;
+    height: 67%;
+    top: 22%;
+  }
+  
+  #footer {
+    bottom: 1rem;
+  }
+  
+   
+}
