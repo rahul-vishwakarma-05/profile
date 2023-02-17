@@ -6,15 +6,15 @@ const swip = document.querySelector('.switch');
 const withd = document.querySelector('.with');
 const check = document.querySelector(".checkbox");
 const outerdep = document.querySelector('.deposite');
-const close = document.querySelector('.withdrawal > ion-icon');
+const close = document.querySelector('.withdrawals > ion-icon');
 const withdrawals = document.querySelector('.withdrawals');
 
 //---------------------------------------------------- close button for popup --------------------------------------------------------------------- 
 close.addEventListener('click', () => {
     profile_t.style.filter = " blur(0)";
-    withdrawal.style.transform = "translateX(-130%)";
+    withdrawal.style.transform = "translateY(130%)";
     outerdep.style.transform = "translate(130%)";
-    withdrawals.style.transform = "translateX(-130%)";
+    withdrawals.style.transform = "translateY(130%)";
     check.checked = false;
     withd.style.transform = "translateX(0)";
 });
@@ -22,8 +22,8 @@ close.addEventListener('click', () => {
 
 // ----------------------------------------------  withdrawal popup -----------------------------------------   -----------------------------------------------------
 add_w.addEventListener("click", () => {
-    withdrawal.style.transform = "translateX(0)";
-    withdrawals.style.transform = "translateX(0)";
+    withdrawal.style.transform = "translateY(0)";
+    withdrawals.style.transform = "translateY(0)";
     profile_t.style.filter = " blur(10px)";
 
 });
@@ -95,14 +95,21 @@ const pro_det = document.querySelector('.pro_det');
 const bank_det = document.querySelector('.bank_det');
 const upi_main_page = document.querySelector('.upi_page');
 const contact_page = document.querySelector('.contact_page');
-
+const settings_uper_divs = document.querySelectorAll('.setting_opp > div > div');
+const p = document.querySelector('#p');
+const b = document.querySelector('#b');
+const u = document.querySelector('#a');
+const c = document.querySelector('#c');
 
 user_icon.addEventListener('click', () => {
     pro_det.style.cssText = ` transform:scaleY(1);height:50%;`;
     bank_det.style.cssText = `transform:scaleY(0);height:0;`;
     upi_main_page.style.cssText = `transform:scaleY(0);height:0;`;
     contact_page.style.cssText = `transform:scaleY(0);height:0;`;
-
+    p.style.color = "#ad1d85";
+    b.style.color = "black";
+    u.style.color = "black";
+    c.style.color = "black";
 });
 
 
@@ -111,7 +118,11 @@ bank_icon.addEventListener('click', () => {
     bank_det.style.cssText = `transform:scaleY(1);height:48%; margin:0`;
     upi_main_page.style.cssText = `transform:scaleY(0);height:0;`;
     contact_page.style.cssText = `transform:scaleY(0);height:0;`;
-
+    p.style.color = "black";
+    b.style.color = "#ad1d85";
+    u.style.color = "black";
+    c.style.color = "black";
+   
 });
 
 
@@ -120,7 +131,11 @@ upi_icon.addEventListener('click', () => {
     bank_det.style.cssText = `transform:scaleY(0);height:0;margin:0`;
     upi_main_page.style.cssText = `transform:scaleY(1);height:48%;`;
     contact_page.style.cssText = `transform:scaleY(0);height:0;`;
-
+    p.style.color = "balck";
+    b.style.color = "black";
+    u.style.color = "#ad1d85";
+    c.style.color = "black";
+    
 });
 
 
@@ -129,7 +144,10 @@ phone_icon.addEventListener('click', () => {
     bank_det.style.cssText = `transform:scaleY(0);height:0;`;
     upi_main_page.style.cssText = `transform:scaleY(0);height:0;`;
     contact_page.style.cssText = `transform:scaleY(1);height:48%;`;
-
+    p.style.color = "black";
+    b.style.color = "black";
+    u.style.color = "black";
+    c.style.color = "#ad1d85";    
 });
 
 // --------------------------------------------- writting js for the upi id -------------------------------------------------------------------------------------------------------------------------------
@@ -149,18 +167,26 @@ upi_add_btn.addEventListener('click', () => {
 });
 
 
-// -------------------------------------------------- writting the js for settings ----------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------- writting the js for settings outside aerrow ----------------------------------------------------------------------------------------------------------------
 
-const setting_btn   = document.querySelector('.profile_two > h4 > ion-icon');
-const setting_body  = document.querySelector('.setting');
+const setting_btn = document.querySelector('.profile_two > h4 > ion-icon');
+const setting_body = document.querySelector('.setting');
 const setting_arrow = document.querySelector('.setting > h3 > ion-icon');
 
-setting_btn.addEventListener('click' , ()=>{
-    profile_t.style.transform = "translateX(130%)"
-    setting_body.style.transform = "translateX(0%)"
+setting_btn.addEventListener('click', () => {
+    profile_t.style.transform = "translateX(130%)";
+    setting_body.style.transform = "translateX(0%)";
 });
 
-setting_arrow.addEventListener('click',()=>{
-    profile_t.style.transform = "translateX(0)"
-    setting_body.style.transform = "translateX(130%)"
+setting_arrow.addEventListener('click', () => {
+    profile_t.style.transform = "translateX(0)";
+    setting_body.style.transform = "translateX(130%)";
+    pro_det.style.cssText = ` transform:scaleY(1);height:50%;`;
+    bank_det.style.cssText = `transform:scaleY(0);height:0;`;
+    upi_main_page.style.cssText = `transform:scaleY(0);height:0;`;
+    contact_page.style.cssText = `transform:scaleY(0);height:0;`;
+    p.style.color = "#ad1d85";
+    b.style.color = "black";
+    u.style.color = "black";
+    c.style.color = "black";
 });
