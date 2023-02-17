@@ -32,7 +32,15 @@
       </div>
 
       <div class="profile_details">
-
+        <span class="user_details">
+          <h3>
+            <p>rahul vishwakarma</p>
+          </h3>
+          <h4>
+            <ion-icon name="camera"></ion-icon>
+            <p>9304411522</p>
+          </h4>
+        </span>
         <div>
           <h3>withdrawal amount</h3>
           <h4>200,00</h4>
@@ -55,16 +63,16 @@
       <div id='footer'>
 
         <div>
-          <ion-icon name="close"></ion-icon>
-          <a>
+          <ion-icon name="home-outline"></ion-icon>
+          <a href="home.html">
             <h5>HOME</h5>
           </a>
         </div>
 
         <div>
-          <ion-icon name="close"></ion-icon>
-          <a>
-            <h5>WITHDRAWAL</h5>
+          <ion-icon name="refresh-sharp" ></ion-icon>
+          <a href="">
+            <h5>history</h5>
           </a>
         </div>
 
@@ -76,15 +84,15 @@
         </div>
 
         <div>
-          <ion-icon name="close"></ion-icon>
-          <a>
+          <ion-icon name="newspaper-outline"></ion-icon>
+          <a href="">
             <h5>RESULT</h5>
           </a>
         </div>
 
         <div>
-          <ion-icon name="close"></ion-icon>
-          <a>
+          <ion-icon name="person-outline"></ion-icon>
+          <a href="profile.html">
             <h5>PROFILE</h5>
           </a>
         </div>
@@ -95,15 +103,16 @@
     <!-- ---------------------------withdrawal page and deposite page ------------------------------------------------------------------------------------- -->
 
     <main class="withdrawals">
+      
+      <label class="switch">
+        <input type="checkbox" class="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <ion-icon name="close"></ion-icon>
 
       <section class="withdrawal">
         <!-- ------------------------switch system for withdrawal and deposite page ------------------------- -->
-        <label class="switch">
-          <input type="checkbox" class="checkbox">
-          <span class="slider round"></span>
-        </label>
-        <ion-icon name="close"></ion-icon>
-
+        
         <div class="with">
           <div class="winning_amount">
             <h4>Your Winning Amount</h4>
@@ -179,7 +188,7 @@
           <div>
             <i class="fa fa-user"></i>
           </div>
-          <p>profile</p>
+          <p id="p">profile</p>
         </div>
 
 
@@ -187,15 +196,15 @@
           <div>
             <i class="fa fa-bank"></i>
           </div>
-          <p>add bank</p>
+          <p id="b">add bank</p>
         </div>
 
 
         <div>
-          <div>
+          <div class="u">
             <img src="bhim.png" alt="" class="upi">
           </div>
-          <p>add upi</p>
+          <p id="a">add upi</p>
         </div>
 
 
@@ -203,7 +212,7 @@
           <div>
             <i class="fa fa-phone"></i>
           </div>
-          <p>contact us</p>
+          <p id="c">contact us</p>
         </div>
       </div>
 
