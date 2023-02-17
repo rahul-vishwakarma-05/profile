@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Explora&family=Unbounded:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Explora&family=Unbounded:wght@400;500&display=swap");
 
 * {
   margin: 0;
@@ -10,7 +10,7 @@ body {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-	font-family: Raleway, sans-serif;
+  font-family: Raleway, sans-serif;
   text-align: center;
   text-decoration: none;
   display: flex;
@@ -127,20 +127,23 @@ body {
   justify-content: center;
   padding-bottom: 2rem;
 }
-.user_details{
- display: block;
- margin-bottom: 2rem;
- color: gray;
+.user_details {
+  display: block;
+  color: gray;
+  padding-top: 2rem;
 }
-.user_details > h4{
-display: flex;
-justify-content: center;
-margin-top: .3rem;
+.user_details > h4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.3rem;
 }
-.user_details > h4 > ion-icon{
-  margin-right: .5rem;
+.user_details > h4 > ion-icon {
+  margin-right: 0.5rem;
 }
-.profile_details > div {
+.profile_details_innear{
+  margin-top: 1rem;
+}
+ .profile_details_innear > div {
   display: flex;
   justify-content: space-around;
   padding: 0.5rem;
@@ -152,7 +155,7 @@ margin-top: .3rem;
   text-transform: capitalize;
   color: rgba(255, 255, 255, 0.834);
 }
-.profile_details > div::before {
+.profile_details_innear > div::before {
   content: "";
   position: absolute;
   left: -0.038rem;
@@ -167,7 +170,7 @@ margin-top: .3rem;
 }
 #footer {
   position: absolute;
-  bottom: 3.5rem;
+  bottom: 4rem;
   left: 2.5%;
   width: 95%;
   height: 63px;
@@ -177,7 +180,7 @@ margin-top: .3rem;
   grid-template-columns: repeat(5, 1fr);
   border-radius: 100vw;
   box-shadow: 0 0 10px grey;
- text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 #footer > div {
@@ -188,12 +191,12 @@ margin-top: .3rem;
   justify-content: center;
   align-items: center;
 }
-#footer > div > a{
+#footer > div > a {
   text-decoration: none;
 }
 #footer > div > ion-icon {
   font-size: 25px;
-  margin-bottom: .1rem;
+  margin-bottom: 0.1rem;
 }
 
 #footer > div > a > h5 {
@@ -207,8 +210,8 @@ margin-top: .3rem;
   transform: translateY(-1.5rem);
   font-size: 1.7rem;
 }
-.footer-crown > h3 > ion-icon{
-  margin-top: .5rem;
+.footer-crown > h3 > ion-icon {
+  margin-top: 0.5rem;
 }
 
 /* -------------------withdrawal page and  ------------------------------------------------------------------------- */
@@ -232,13 +235,13 @@ margin-top: .3rem;
   align-items: center;
   height: 70vh;
   transform: translateY(150%);
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 .withdrawal {
   margin: 0 auto;
   width: 95%;
   height: 65%;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 .withdrawals > ion-icon {
   position: absolute;
@@ -381,11 +384,11 @@ input:checked + .slider:before {
   margin: 0 auto;
   position: fixed;
   top: 12%;
-  left: .5rem;
-  right: .5rem;
+  left: 0.5rem;
+  right: 0.5rem;
   width: 95%;
   height: 65%;
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
   transform: translate(130%);
 }
 
@@ -681,7 +684,7 @@ input:checked + .slider:before {
 
 /* ----------------------  media query for --------------------------------------------------------------------------------------------------------------------------- */
 /* ----------------------- width:-400px and height:- 900px ---------------------------------------------- */
-@media screen and (max-height:667px) {
+@media screen and (max-height: 667px) {
   .profile_pic {
     width: 6rem;
     height: 6rem;
@@ -690,17 +693,14 @@ input:checked + .slider:before {
     font-size: 3rem;
     margin: 0 auto;
   }
-  
-  
+
   .profile_details {
     position: relative;
     height: 67%;
     top: 22%;
   }
-  
+
   #footer {
     bottom: 1rem;
   }
-  
-   
 }
