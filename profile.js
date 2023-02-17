@@ -6,15 +6,15 @@ const swip = document.querySelector('.switch');
 const withd = document.querySelector('.with');
 const check = document.querySelector(".checkbox");
 const outerdep = document.querySelector('.deposite');
-const close = document.querySelector('.withdrawals > ion-icon');
+const close = document.querySelector('.withdrawals_in > ion-icon');
 const withdrawals = document.querySelector('.withdrawals');
-
+const deposite_add_btn = document.querySelector('#add');
 //---------------------------------------------------- close button for popup --------------------------------------------------------------------- 
 close.addEventListener('click', () => {
     profile_t.style.filter = " blur(0)";
-    withdrawal.style.transform = "translateY(130%)";
-    outerdep.style.transform = "translate(130%)";
-    withdrawals.style.transform = "translateY(130%)";
+    withdrawal.style.transform = "translateY(200%)";
+    outerdep.style.transform = "translate(200%)";
+    withdrawals.style.transform = "translateY(200%)";
     check.checked = false;
     withd.style.transform = "translateX(0)";
 });
@@ -53,16 +53,16 @@ swip.addEventListener('click', () => {
 // ------------------------------------------------ js for users profile details ---------------------------------------------------------------------
 
 const pro_edit_id1 = document.querySelector('#one');
-// const pro_edit_icon_id1 = document.querySelector('#one');
+const pro_edit_icon_id1 = document.querySelector('#one');
 
 const pro_edit_id2 = document.querySelector('#two');
-// const pro_edit_icon_id2 = document.querySelector('#two');
+const pro_edit_icon_id2 = document.querySelector('#two');
 
 const pro_edit_id3 = document.querySelector('#three');
-// const pro_edit_icon_id3 = document.querySelector('#three');
+const pro_edit_icon_id3 = document.querySelector('#three');
 
 const pro_edit_id4 = document.querySelector('#four');
-// const pro_edit_icon_id4 = document.querySelector('#four');
+const pro_edit_icon_id4 = document.querySelector('#four');
 
 const pro_same_clss = document.querySelectorAll('.same');
 let pro_icon_sams = document.querySelectorAll('.sams');
@@ -75,8 +75,10 @@ pro_icon_sams.forEach(element => {
         pro_same_clss.forEach(i => {
             if (i.id == element.id) {
                 i.disabled = false;
+                i.style.cssText = `border-bottom:2px solid black`;
             } else {
                 i.disabled = true;
+                i.style.cssText = `border-bottom:1px solid black`;
             }
         });
     });
@@ -110,6 +112,12 @@ user_icon.addEventListener('click', () => {
     b.style.color = "black";
     u.style.color = "black";
     c.style.color = "black";
+    pro_same_clss.forEach(element => {
+        element.disabled = true;
+        element.value = "";
+        element.style.cssText = `border-bottom:1px solid`
+    });
+    
 });
 
 
@@ -122,7 +130,12 @@ bank_icon.addEventListener('click', () => {
     b.style.color = "#ad1d85";
     u.style.color = "black";
     c.style.color = "black";
-   
+    pro_same_clss.forEach(element => {
+        element.disabled = true;
+        element.value = "";
+        element.style.cssText = `border-bottom:1px solid`
+    });
+    
 });
 
 
@@ -135,6 +148,11 @@ upi_icon.addEventListener('click', () => {
     b.style.color = "black";
     u.style.color = "#ad1d85";
     c.style.color = "black";
+    pro_same_clss.forEach(element => {
+        element.disabled = true;
+        element.value = "";
+        element.style.cssText = `border-bottom:1px solid`
+    });
     
 });
 
@@ -148,6 +166,12 @@ phone_icon.addEventListener('click', () => {
     b.style.color = "black";
     u.style.color = "black";
     c.style.color = "#ad1d85";    
+    pro_same_clss.forEach(element => {
+        element.disabled = true;
+        element.value = "";
+        element.style.cssText = `border-bottom:1px solid`
+    });
+    
 });
 
 // --------------------------------------------- writting js for the upi id -------------------------------------------------------------------------------------------------------------------------------
@@ -189,4 +213,16 @@ setting_arrow.addEventListener('click', () => {
     b.style.color = "black";
     u.style.color = "black";
     c.style.color = "black";
+
+    pro_same_clss.forEach(element => {
+        element.disabled = true;
+        element.value = "";
+        element.style.cssText = `border-bottom:1px solid`
+    });
+     
+});
+
+// ----------------- writting js for deposite add btn -----------------------------------------------------------------------------------------------------
+deposite_add_btn.addEventListener('click' , ()=>{
+  alert("added")
 });
