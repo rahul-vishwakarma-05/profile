@@ -106,13 +106,14 @@
     <!-- ---------------------------withdrawal page and deposite page ------------------------------------------------------------------------------------- -->
 
     <main class="withdrawals">
-
-      <label class="switch">
-        <input type="checkbox" class="checkbox">
-        <span class="slider round"></span>
-      </label>
-      <ion-icon name="close"></ion-icon>
-
+      <div class="withdrawals_in">
+        <label class="switch">
+          <input type="checkbox" class="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <ion-icon name="close"></ion-icon>  
+      </div> 
+      
       <section class="withdrawal">
         <!-- ------------------------switch system for withdrawal and deposite page ------------------------- -->
         
@@ -166,7 +167,7 @@
             <input type="number" placeholder="add amount">
           </div>
           <span>
-            <button>Add</button>
+            <button id="add">Add</button>
           </span>
         </div>
       </section>
@@ -265,19 +266,19 @@
           </div>
 
           <div>
-            <input type="password" placeholder="password" id="two" class="same">
+            <input type="password" placeholder="your account number" id="two" class="same">
             <ion-icon name="pencil-outline" id="two" class="sams"></ion-icon>
           </div>
 
           <div>
-            <input type="email" placeholder="E-mail id" id="three" class="same">
+            <input type="text" placeholder="ifsc code" id="three" class="same">
             <ion-icon name="pencil-outline" id="three" class="sams"></ion-icon>
           </div>
 
-          <div>
+          <!-- <div>
             <input type="text" placeholder="Your Name" id="four" class="same">
             <ion-icon name="pencil-outline" id="four" class="sams"></ion-icon>
-          </div>
+          </div> -->
           <span>
             <p><ion-icon name="arrow-forward-outline"></ion-icon></p>
           </span>
